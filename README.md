@@ -157,7 +157,8 @@ pnpm build
 
 The production branch is **`main`** and is connected to Vercel.
 
-**Live:** https://veena-vadini-scl.vercel.app
+**Live:** https://veena-vadini-scl.vercel.app  
+**Production:** Vercel · `main` branch
 
 Changes pushed to the production branch can trigger a new Vercel deployment.
 
