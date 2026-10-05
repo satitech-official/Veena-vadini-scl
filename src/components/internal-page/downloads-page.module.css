@@ -1,0 +1,13 @@
+:global(.internal-page-hero-downloads).hero :global(.internal-page-hero-title) {
+  max-width: min(16.5ch, 100%);
+  font-size: clamp(3.25rem, 6.2vw, 7.1rem);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+:global(.downloads-page-body) .editorialHeading {
+  max-width: none;
+  font-size: clamp(2.35rem, 3.4vw, 2.9rem);
+  letter-spacing: -0.018em;
+  line-height: 1.06;
+}

@@ -1,0 +1,6 @@
+:global(.downloads-empty-state) .emptyHeading {
+  max-width: min(22ch, 100%);
+  font-size: clamp(2rem, 3.7vw, 4.15rem);
+  letter-spacing: -0.02em;
+  line-height: 1.06;
+}

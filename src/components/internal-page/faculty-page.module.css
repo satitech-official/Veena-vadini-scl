@@ -1,0 +1,17 @@
+:global(.internal-page-hero-faculty).hero :global(.internal-page-hero-title),
+:global(.faculty-empty-state) .announcement {
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+:global(.faculty-empty-state) .announcement {
+  max-width: min(22ch, 100%);
+  font-size: clamp(2.35rem, 4.2vw, 5.2rem);
+}
+
+:global(.faculty-empty-state) .supportingCopy {
+  max-width: 43rem;
+  margin-top: clamp(0.4rem, 1.3vw, 1rem);
+  font-size: clamp(0.95rem, 1.1vw, 1.08rem);
+  line-height: 1.66;
+}
