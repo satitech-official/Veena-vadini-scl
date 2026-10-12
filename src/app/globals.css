@@ -2283,26 +2283,25 @@ body {
 }
 
 .instagram-frame-meta {
-  position: absolute;
-  z-index: 2;
-  right: 0.8rem;
-  bottom: 0.8rem;
-  left: 0.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  border-top: 1px solid color-mix(in srgb, var(--brand-indigo) 18%, transparent);
-  padding-top: 0.55rem;
-  text-shadow: 0 1px 10px rgba(255, 255, 255, 0.76);
+  display: none;
 }
 
 .instagram-handle-panel {
   grid-column: span 7;
+  min-width: 0;
   min-height: 12rem;
+  overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--brand-indigo) 15%, transparent);
   background: color-mix(in srgb, var(--warm-paper) 62%, white);
   padding: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+.instagram-handle-panel .font-display {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  font-size: clamp(1.65rem, 2.8vw, 3.25rem);
+  line-height: 0.94;
 }
 
 .contact-chapter {
