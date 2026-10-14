@@ -10,6 +10,20 @@ type GalleryMediaVisualProps = {
 
 export function GalleryMediaVisual({ item, priority = false, showReplacementNote = true }: GalleryMediaVisualProps) {
   if (!item.isPlaceholder && item.src) {
+    const source = item.thumbnailSrc ?? item.src;
+
+    if (source.startsWith("data:")) {
+      return (
+        <img
+          alt={item.alt}
+          className="absolute inset-0 h-full w-full object-cover"
+          loading={priority ? "eager" : "lazy"}
+          src={source}
+          style={{ objectPosition: item.objectPosition ?? "center" }}
+        />
+      );
+    }
+
     return (
       <Image
         alt={item.alt}
@@ -17,7 +31,7 @@ export function GalleryMediaVisual({ item, priority = false, showReplacementNote
         fill
         priority={priority}
         sizes="(max-width: 47.99rem) 100vw, (max-width: 63.99rem) 50vw, 42vw"
-        src={item.thumbnailSrc ?? item.src}
+        src={source}
         style={{ objectPosition: item.objectPosition ?? "center" }}
       />
     );
