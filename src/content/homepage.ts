@@ -26,8 +26,8 @@ export const placeholderMedia = {
     label: "Classroom moment",
     category: "Classroom",
     description: "A real classroom at Veena Vadini Public School.",
-    asset: schoolPhotoData.classroom,
-    alt: "Classroom at Veena Vadini Public School.",
+    asset: "https://images.unsplash.com/photo-1719159381916-062fa9f435a6?auto=format&fit=crop&fm=jpg&q=82&w=1800",
+    alt: "Students learning together in a bright classroom.",
     objectPosition: "center",
   },
   playground: {
@@ -35,8 +35,8 @@ export const placeholderMedia = {
     label: "Playground perspective",
     category: "School Life",
     description: "Students participating in an outdoor school activity.",
-    asset: schoolPhotoData.playground,
-    alt: "Veena Vadini Public School students participating in an outdoor activity.",
+    asset: "https://images.unsplash.com/photo-1791064482551-455a790c5b5b?auto=format&fit=crop&fm=jpg&q=82&w=1800",
+    alt: "Children playing together on a school sports court.",
     objectPosition: "center",
   },
   smartClass: {
@@ -44,8 +44,8 @@ export const placeholderMedia = {
     label: "Smart learning moment",
     category: "Learning Space",
     description: "A real learning space at Veena Vadini Public School.",
-    asset: schoolPhotoData.classroom,
-    alt: "Learning space at Veena Vadini Public School.",
+    asset: "https://images.unsplash.com/photo-1743834147172-37c12011b321?auto=format&fit=crop&fm=jpg&q=82&w=1800",
+    alt: "Students and teacher in a computer classroom.",
     objectPosition: "center",
   },
   activities: {
@@ -53,8 +53,8 @@ export const placeholderMedia = {
     label: "Creative activity moment",
     category: "Activities",
     description: "Students taking part in a hands-on school activity.",
-    asset: schoolPhotoData.activities,
-    alt: "Student taking part in a school activity at Veena Vadini Public School.",
+    asset: "https://images.unsplash.com/photo-1788882679821-e6d85bd17d5f?auto=format&fit=crop&fm=jpg&q=82&w=1800",
+    alt: "Children taking part in a creative classroom activity.",
     objectPosition: "center",
   },
   studentLife: {
@@ -67,6 +67,16 @@ export const placeholderMedia = {
     objectPosition: "center",
   },
 } satisfies Record<string, PlaceholderMedia>;
+
+export const premiumClassroomAlt: PlaceholderMedia = {
+  key: "classroom-learning-alt",
+  label: "Learning together",
+  category: "Learning",
+  description: "A bright classroom learning moment.",
+  asset: "https://images.unsplash.com/photo-1573894998033-c0cef4ed722b?auto=format&fit=crop&fm=jpg&q=82&w=1800",
+  alt: "Students learning together in a classroom.",
+  objectPosition: "center",
+};
 
 export const extraSchoolMedia = {
   awardStudent: {
