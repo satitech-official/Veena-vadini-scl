@@ -1,4 +1,4 @@
-import { placeholderMedia } from "@/content/homepage";
+import { extraSchoolMedia, placeholderMedia } from "@/content/homepage";
 
 export const internalPageFacts = {
   school: [
@@ -23,7 +23,7 @@ export const internalAcademicStages = [
     title: "Curiosity gets a welcoming start.",
     description: "A foundational stage shaped around exploration, early language and numeracy, creativity, communication, and growing confidence.",
     focus: ["Exploration", "Foundational language", "Numeracy", "Creativity", "Communication", "Confidence"],
-    media: placeholderMedia.activities,
+    media: extraSchoolMedia.planting,
   },
   {
     id: "primary",
@@ -33,7 +33,7 @@ export const internalAcademicStages = [
     title: "Foundations take shape through participation.",
     description: "A stage that supports academic foundations alongside communication, conceptual learning, creativity, and collaboration.",
     focus: ["Academic foundations", "Communication", "Conceptual learning", "Creativity", "Collaboration"],
-    media: placeholderMedia.classrooms,
+    media: extraSchoolMedia.classroomPink,
   },
   {
     id: "middle-school",
