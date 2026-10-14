@@ -14,6 +14,26 @@ export function SchoolMediaPlaceholder({
   media,
   ...props
 }: SchoolMediaPlaceholderProps) {
+  if (media.asset) {
+    return (
+      <figure
+        aria-label={media.alt ?? media.label}
+        className={cn("school-media-placeholder", className)}
+        data-media={media.key}
+        {...props}
+      >
+        <img
+          alt={media.alt ?? media.label}
+          className="absolute inset-0 h-full w-full object-cover"
+          loading="lazy"
+          src={media.asset}
+          style={{ objectPosition: media.objectPosition ?? "center" }}
+        />
+        <figcaption className="sr-only">{media.caption ?? media.description}</figcaption>
+      </figure>
+    );
+  }
+
   return (
     <figure
       aria-label={`${media.label} placeholder`}
