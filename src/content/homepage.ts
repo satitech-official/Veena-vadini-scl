@@ -68,6 +68,34 @@ export const placeholderMedia = {
   },
 } satisfies Record<string, PlaceholderMedia>;
 
+export const extraSchoolMedia = {
+  awardStudent: {
+    key: "award-student", label: "Student achievement", category: "Achievements",
+    description: "A real Veena Vadini student achievement moment.", asset: "/images/school/award-student.jpg",
+    alt: "Veena Vadini Public School student achievement moment.", objectPosition: "center",
+  },
+  awardTeacher: {
+    key: "award-teacher", label: "Learning achievement", category: "School Community",
+    description: "A real Veena Vadini school community achievement moment.", asset: "/images/school/award-teacher.jpg",
+    alt: "Veena Vadini Public School student with teacher during an achievement moment.", objectPosition: "center",
+  },
+  planting: {
+    key: "planting", label: "Hands-on activity", category: "Activities",
+    description: "A real hands-on student activity at Veena Vadini Public School.", asset: "/images/school/planting.jpg",
+    alt: "Veena Vadini Public School student taking part in a hands-on activity.", objectPosition: "center",
+  },
+  classroomPink: {
+    key: "classroom-pink", label: "Classroom learning", category: "Classroom",
+    description: "A real classroom learning space at Veena Vadini Public School.", asset: "/images/school/classroom-pink.jpg",
+    alt: "Classroom learning space at Veena Vadini Public School.", objectPosition: "center",
+  },
+  staff: {
+    key: "staff", label: "School community", category: "School Community",
+    description: "A real staff and school-community moment at Veena Vadini Public School.", asset: "/images/school/staff.jpg",
+    alt: "Veena Vadini Public School staff and school community.", objectPosition: "center",
+  },
+} satisfies Record<string, PlaceholderMedia>;
+
 export const admissionRibbonItems = [
   "Admissions Open",
   "Nursery to Class 8",
@@ -278,11 +306,11 @@ export const facilities = [
 ] as const;
 
 export const studentLifeMoments = [
-  { number: "01", label: "Learning", media: placeholderMedia.classrooms },
-  { number: "02", label: "Art & Creativity", media: placeholderMedia.activities },
+  { number: "01", label: "Learning", media: extraSchoolMedia.classroomPink },
+  { number: "02", label: "Art & Creativity", media: extraSchoolMedia.planting },
   { number: "03", label: "Sports", media: placeholderMedia.playground },
   { number: "04", label: "Celebrations", media: placeholderMedia.studentLife },
-  { number: "05", label: "Cultural Activities", media: placeholderMedia.activities },
-  { number: "06", label: "Teamwork", media: placeholderMedia.studentLife },
-  { number: "07", label: "Competitions", media: placeholderMedia.studentLife },
+  { number: "05", label: "Cultural Activities", media: extraSchoolMedia.awardTeacher },
+  { number: "06", label: "Teamwork", media: extraSchoolMedia.staff },
+  { number: "07", label: "Competitions", media: extraSchoolMedia.awardStudent },
 ] as const;
