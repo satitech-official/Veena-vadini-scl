@@ -48,7 +48,7 @@ export async function InstagramSection() {
             <div className="instagram-handle-panel">
               <InstagramIcon aria-hidden="true" className="text-gold-ink" size={20} />
               <p className="mt-4 font-display text-[clamp(1.8rem,3.5vw,3.5rem)] leading-[0.9] tracking-[-0.06em] text-primary">{settings.social.instagram.handle}</p>
-              <p className="mt-3 text-xs font-semibold leading-5 text-muted">Curated placeholder composition · approved media can replace each frame.</p>
+              <p className="mt-3 text-xs font-semibold leading-5 text-muted">Curated school moments from the supplied Veena Vadini photo collection.</p>
             </div>
           </div>
         </div>
