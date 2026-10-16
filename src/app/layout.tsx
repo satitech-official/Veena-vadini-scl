@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import {
   Cormorant_Garamond,
   DM_Sans,
+  Noto_Sans_Devanagari,
+  Noto_Serif_Devanagari,
 } from "next/font/google";
 
 import { siteMetadata } from "@/config/site-metadata";
@@ -24,6 +26,18 @@ const displayFont = Cormorant_Garamond({
 const sansFont = DM_Sans({
   variable: "--font-vv-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const hindiDisplayFont = Noto_Serif_Devanagari({
+  variable: "--font-vv-hi-display",
+  subsets: ["devanagari"],
+  weight: ["500", "600", "700"],
+});
+
+const hindiSansFont = Noto_Sans_Devanagari({
+  variable: "--font-vv-hi-sans",
+  subsets: ["devanagari"],
   weight: ["400", "500", "600", "700"],
 });
 
@@ -76,7 +90,7 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
-      className={`${displayFont.variable} ${sansFont.variable} h-full antialiased`}
+      className={`${displayFont.variable} ${sansFont.variable} ${hindiDisplayFont.variable} ${hindiSansFont.variable} h-full antialiased`}
       >
       <body className="flex min-h-full flex-col">
         <SchoolStructuredData settings={settings} />
