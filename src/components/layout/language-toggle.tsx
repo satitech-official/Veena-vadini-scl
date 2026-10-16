@@ -145,7 +145,7 @@ export function LanguageToggle({ mobile = false }: { mobile?: boolean }) {
       aria-label={language === "en" ? "Translate website to Hindi" : "Translate website to English"}
       className={
         mobile
-          ? "inline-flex h-11 items-center gap-2 rounded-full border border-white/25 px-4 text-xs font-bold uppercase tracking-[0.08em] text-white transition-colors hover:border-gold hover:text-gold"
+          ? "inline-flex h-11 items-center gap-1.5 rounded-full border border-brand-indigo/15 px-3 text-[0.61rem] font-bold uppercase tracking-[0.06em] text-primary transition-colors hover:border-brand-red hover:text-brand-red"
           : "inline-flex h-10 items-center gap-2 rounded-full border border-brand-indigo/15 px-3.5 text-[0.63rem] font-bold uppercase tracking-[0.08em] text-primary transition-colors hover:border-brand-red hover:text-brand-red"
       }
       onClick={() => switchLanguage(nextLanguage)}
