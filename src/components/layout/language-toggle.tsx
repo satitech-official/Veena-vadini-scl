@@ -23,6 +23,11 @@ const SCRIPT_ID = "vv-google-translate-script";
 const ELEMENT_ID = "google_translate_element";
 const STORAGE_KEY = "vvps-language";
 
+function setDocumentLanguage(language: Language) {
+  document.documentElement.lang = language === "hi" ? "hi" : "en";
+  document.documentElement.dataset.vvLanguage = language;
+}
+
 function setGoogleTranslateCookie(language: Language) {
   const value = language === "hi" ? "/en/hi" : "/en/en";
   const maxAge = 60 * 60 * 24 * 365;
@@ -72,6 +77,7 @@ export function LanguageToggle({ mobile = false }: { mobile?: boolean }) {
     if (saved === "hi") {
       window.setTimeout(() => {
         setGoogleTranslateCookie("hi");
+        setDocumentLanguage("hi");
         applyGoogleLanguage("hi");
         setLanguage("hi");
       }, 450);
@@ -82,6 +88,9 @@ export function LanguageToggle({ mobile = false }: { mobile?: boolean }) {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved === "hi") {
       setLanguage("hi");
+      setDocumentLanguage("hi");
+    } else {
+      setDocumentLanguage("en");
     }
 
     let mount = document.getElementById(ELEMENT_ID);
@@ -119,6 +128,7 @@ export function LanguageToggle({ mobile = false }: { mobile?: boolean }) {
     (nextLanguage: Language) => {
       localStorage.setItem(STORAGE_KEY, nextLanguage);
       setGoogleTranslateCookie(nextLanguage);
+      setDocumentLanguage(nextLanguage);
       setLanguage(nextLanguage);
 
       if (applyGoogleLanguage(nextLanguage)) return;
@@ -150,6 +160,7 @@ export function LanguageToggle({ mobile = false }: { mobile?: boolean }) {
       }
       onClick={() => switchLanguage(nextLanguage)}
       type="button"
+      data-vv-language-toggle="true"
       translate="no"
     >
       <Languages aria-hidden="true" size={16} strokeWidth={1.8} />
