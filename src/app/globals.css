@@ -4256,3 +4256,64 @@ html.translated-ltr .site-footer .font-display,
 html.translated-rtl .site-footer .font-display {
   line-height: 1.24;
 }
+
+
+/* Custom translator: hide all Google translation chrome so the school header
+ * remains fixed at the very top and the existing design never shifts. */
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame,
+body > .skiptranslate,
+.VIpgJd-ZVi9od-ORHb-OEVmcd,
+.VIpgJd-ZVi9od-ORHb-OEVmcd.skiptranslate,
+iframe.VIpgJd-ZVi9od-ORHb-OEVmcd,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+#goog-gt-tt,
+.goog-te-balloon-frame {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  min-height: 0 !important;
+}
+
+html,
+body {
+  top: 0 !important;
+  margin-top: 0 !important;
+}
+
+html[data-vv-language="hi"] body {
+  font-family: var(--font-vv-hi-sans), "Noto Sans Devanagari", Arial, sans-serif !important;
+}
+
+html[data-vv-language="hi"] .font-display,
+html[data-vv-language="hi"] .type-display-xl,
+html[data-vv-language="hi"] .type-display,
+html[data-vv-language="hi"] .type-h1,
+html[data-vv-language="hi"] .type-h2,
+html[data-vv-language="hi"] .type-h3 {
+  font-family: var(--font-vv-hi-display), "Noto Serif Devanagari", serif !important;
+  letter-spacing: 0 !important;
+  line-height: 1.18 !important;
+}
+
+html[data-vv-language="hi"] .hero-title {
+  font-family: var(--font-vv-hi-display), "Noto Serif Devanagari", serif !important;
+  letter-spacing: 0 !important;
+  line-height: 1.14 !important;
+}
+
+html[data-vv-language="hi"] .type-eyebrow,
+html[data-vv-language="hi"] [class*="tracking-"] {
+  letter-spacing: 0 !important;
+}
+
+html[data-vv-language="hi"] main :is(p, span, a, button, li, small) {
+  font-family: var(--font-vv-hi-sans), "Noto Sans Devanagari", Arial, sans-serif;
+}
+
+html[data-vv-language="hi"] [data-vv-language-toggle="true"],
+html[data-vv-language="hi"] [data-vv-language-toggle="true"] * {
+  font-family: var(--font-vv-sans), Arial, sans-serif !important;
+  letter-spacing: 0.06em !important;
+}
