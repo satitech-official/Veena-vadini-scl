@@ -26,8 +26,8 @@ export const placeholderMedia = {
     label: "Classroom moment",
     category: "Classroom",
     description: "A real classroom at Veena Vadini Public School.",
-    asset: "https://images.unsplash.com/photo-1719159381916-062fa9f435a6?auto=format&fit=crop&fm=jpg&q=82&w=1800",
-    alt: "Students learning together in a bright classroom.",
+    asset: schoolPhotoData.classroom,
+    alt: "Classroom at Veena Vadini Public School.",
     objectPosition: "center",
   },
   playground: {
@@ -35,8 +35,8 @@ export const placeholderMedia = {
     label: "Playground perspective",
     category: "School Life",
     description: "Students participating in an outdoor school activity.",
-    asset: "https://images.unsplash.com/photo-1791064482551-455a790c5b5b?auto=format&fit=crop&fm=jpg&q=82&w=1800",
-    alt: "Children playing together on a school sports court.",
+    asset: schoolPhotoData.playground,
+    alt: "Veena Vadini Public School students participating in an outdoor activity.",
     objectPosition: "center",
   },
   smartClass: {
@@ -44,8 +44,8 @@ export const placeholderMedia = {
     label: "Smart learning moment",
     category: "Learning Space",
     description: "A real learning space at Veena Vadini Public School.",
-    asset: "https://images.unsplash.com/photo-1743834147172-37c12011b321?auto=format&fit=crop&fm=jpg&q=82&w=1800",
-    alt: "Students and teacher in a computer classroom.",
+    asset: schoolPhotoData.classroom,
+    alt: "Learning space at Veena Vadini Public School.",
     objectPosition: "center",
   },
   activities: {
@@ -53,8 +53,8 @@ export const placeholderMedia = {
     label: "Creative activity moment",
     category: "Activities",
     description: "Students taking part in a hands-on school activity.",
-    asset: "https://images.unsplash.com/photo-1788882679821-e6d85bd17d5f?auto=format&fit=crop&fm=jpg&q=82&w=1800",
-    alt: "Children taking part in a creative classroom activity.",
+    asset: schoolPhotoData.activities,
+    alt: "Student taking part in a school activity at Veena Vadini Public School.",
     objectPosition: "center",
   },
   studentLife: {
@@ -65,44 +65,6 @@ export const placeholderMedia = {
     asset: schoolPhotoData.studentLife,
     alt: "Veena Vadini Public School students during a school celebration.",
     objectPosition: "center",
-  },
-} satisfies Record<string, PlaceholderMedia>;
-
-export const premiumClassroomAlt: PlaceholderMedia = {
-  key: "classroom-learning-alt",
-  label: "Learning together",
-  category: "Learning",
-  description: "A bright classroom learning moment.",
-  asset: "https://images.unsplash.com/photo-1573894998033-c0cef4ed722b?auto=format&fit=crop&fm=jpg&q=82&w=1800",
-  alt: "Students learning together in a classroom.",
-  objectPosition: "center",
-};
-
-export const extraSchoolMedia = {
-  awardStudent: {
-    key: "award-student", label: "Student achievement", category: "Achievements",
-    description: "A real Veena Vadini student achievement moment.", asset: "/images/school/award-student.jpg",
-    alt: "Veena Vadini Public School student achievement moment.", objectPosition: "center",
-  },
-  awardTeacher: {
-    key: "award-teacher", label: "Learning achievement", category: "School Community",
-    description: "A real Veena Vadini school community achievement moment.", asset: "/images/school/award-teacher.jpg",
-    alt: "Veena Vadini Public School student with teacher during an achievement moment.", objectPosition: "center",
-  },
-  planting: {
-    key: "planting", label: "Hands-on activity", category: "Activities",
-    description: "A real hands-on student activity at Veena Vadini Public School.", asset: "/images/school/planting.jpg",
-    alt: "Veena Vadini Public School student taking part in a hands-on activity.", objectPosition: "center",
-  },
-  classroomPink: {
-    key: "classroom-pink", label: "Classroom learning", category: "Classroom",
-    description: "A real classroom learning space at Veena Vadini Public School.", asset: "/images/school/classroom-pink.jpg",
-    alt: "Classroom learning space at Veena Vadini Public School.", objectPosition: "center",
-  },
-  staff: {
-    key: "staff", label: "School community", category: "School Community",
-    description: "A real staff and school-community moment at Veena Vadini Public School.", asset: "/images/school/staff.jpg",
-    alt: "Veena Vadini Public School staff and school community.", objectPosition: "center",
   },
 } satisfies Record<string, PlaceholderMedia>;
 
@@ -316,11 +278,11 @@ export const facilities = [
 ] as const;
 
 export const studentLifeMoments = [
-  { number: "01", label: "Learning", media: extraSchoolMedia.classroomPink },
-  { number: "02", label: "Art & Creativity", media: extraSchoolMedia.planting },
+  { number: "01", label: "Learning", media: placeholderMedia.classrooms },
+  { number: "02", label: "Art & Creativity", media: placeholderMedia.activities },
   { number: "03", label: "Sports", media: placeholderMedia.playground },
   { number: "04", label: "Celebrations", media: placeholderMedia.studentLife },
-  { number: "05", label: "Cultural Activities", media: extraSchoolMedia.awardTeacher },
-  { number: "06", label: "Teamwork", media: extraSchoolMedia.staff },
-  { number: "07", label: "Competitions", media: extraSchoolMedia.awardStudent },
+  { number: "05", label: "Cultural Activities", media: placeholderMedia.activities },
+  { number: "06", label: "Teamwork", media: placeholderMedia.studentLife },
+  { number: "07", label: "Competitions", media: placeholderMedia.studentLife },
 ] as const;
