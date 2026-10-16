@@ -1,4 +1,4 @@
-import { placeholderMedia, premiumClassroomAlt } from "@/content/homepage";
+import { placeholderMedia } from "@/content/homepage";
 
 export const internalPageFacts = {
   school: [
