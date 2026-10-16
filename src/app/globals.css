@@ -4218,3 +4218,41 @@ body {
 .goog-te-gadget {
   display: none !important;
 }
+
+
+/* Hindi translation typography: preserve the existing layout, only swap to
+ * Devanagari-optimized families and spacing when Google Translate is active. */
+html.translated-ltr body,
+html.translated-rtl body {
+  font-family: var(--font-vv-hi-sans), "Noto Sans Devanagari", Arial, sans-serif;
+}
+
+html.translated-ltr .font-display,
+html.translated-rtl .font-display,
+html.translated-ltr .type-display-xl,
+html.translated-ltr .type-display,
+html.translated-ltr .type-h1,
+html.translated-ltr .type-h2,
+html.translated-ltr .type-h3,
+html.translated-rtl .type-display-xl,
+html.translated-rtl .type-display,
+html.translated-rtl .type-h1,
+html.translated-rtl .type-h2,
+html.translated-rtl .type-h3 {
+  font-family: var(--font-vv-hi-display), "Noto Serif Devanagari", serif;
+  letter-spacing: 0 !important;
+}
+
+html.translated-ltr .type-eyebrow,
+html.translated-rtl .type-eyebrow,
+html.translated-ltr [class*="tracking-"],
+html.translated-rtl [class*="tracking-"] {
+  letter-spacing: 0 !important;
+}
+
+html.translated-ltr main :is(h1, h2, h3, p, span).font-display,
+html.translated-rtl main :is(h1, h2, h3, p, span).font-display,
+html.translated-ltr .site-footer .font-display,
+html.translated-rtl .site-footer .font-display {
+  line-height: 1.24;
+}
