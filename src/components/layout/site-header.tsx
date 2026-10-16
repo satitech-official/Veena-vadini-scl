@@ -9,6 +9,7 @@ import { ArrowUpRight, Menu, MessageCircle, Phone, X } from "lucide-react";
 
 import { buttonStyles } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { LanguageToggle } from "@/components/layout/language-toggle";
 import { usePublicSchoolSettings } from "@/components/settings/public-school-settings-provider";
 import { admissionRoute, primaryNavigation } from "@/config/navigation";
 import { getPublicWhatsAppEnquiryUrl } from "@/lib/settings/public-school-settings";
@@ -209,6 +210,7 @@ export function SiteHeader({ isIntroComplete }: SiteHeaderProps) {
               >
                 <MessageCircle aria-hidden="true" size={17} strokeWidth={1.8} />
               </a>
+              <LanguageToggle />
               <Link
                 className={cn(buttonStyles({ size: "sm" }), "group whitespace-nowrap")}
                 href={admissionRoute}
@@ -222,7 +224,9 @@ export function SiteHeader({ isIntroComplete }: SiteHeaderProps) {
               </Link>
             </div>
 
-            <button
+            <div className="ml-auto flex items-center gap-2 xl:hidden">
+              <LanguageToggle mobile />
+              <button
               aria-controls="mobile-navigation"
               aria-expanded={isMenuOpen}
               aria-label={isMenuOpen ? "Close navigation" : "Open navigation"}
@@ -232,7 +236,8 @@ export function SiteHeader({ isIntroComplete }: SiteHeaderProps) {
               type="button"
             >
               <Menu aria-hidden="true" size={20} strokeWidth={1.8} />
-            </button>
+              </button>
+            </div>
           </div>
         </Container>
       </header>
