@@ -17,7 +17,7 @@ export async function AcademicsPage() {
   const eyebrow = getCmsText(settings.cmsContent, "academics", "eyebrow", "Academics");
   const heading = getCmsText(settings.cmsContent, "academics", "heading", "Learning Designed");
   const highlight = getCmsText(settings.cmsContent, "academics", "highlight", "for Every Stage.");
-  const description = getCmsText(settings.cmsContent, "academics", "description", "A considered learning journey from the early years through Class 8, with space for academic foundations, communication, creativity, and growing confidence.");
+  const description = getCmsText(settings.cmsContent, "academics", "description", "A considered learning journey from the early years through Class 9, with space for academic foundations, communication, creativity, and growing confidence.");
   return (
     <>
       <InternalSiteHeader />
