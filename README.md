@@ -32,9 +32,9 @@ The website is designed as a modern, highly responsive educational experience wh
 ### School information
 
 - **School:** Veena Vadini Public School
-- **Board:** CBSE Pattern
+- **Board:** MP Board
 - **Medium:** Hindi & English
-- **Classes:** Nursery to Class 8
+- **Classes:** Nursery to Class 9
 - **Location:** Chhuri Road, Padhar, District Betul, Madhya Pradesh
 - **Tagline:** Empowering Young Minds for a Brighter Tomorrow.
 - **Motto:** Dream. Believe. Achieve.
