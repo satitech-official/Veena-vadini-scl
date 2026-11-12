@@ -4,7 +4,7 @@ import { schoolConfig } from "@/config/school";
 
 export const defaultSiteTitle = `${schoolConfig.name} | Padhar, Betul`;
 export const defaultSiteDescription =
-  "Veena Vadini Public School in Padhar, District Betul, Madhya Pradesh offers Hindi and English medium education from Nursery to Class 8 following a CBSE Pattern.";
+  "Veena Vadini Public School in Padhar, District Betul, Madhya Pradesh offers Hindi and English medium education from Nursery to Class 9 under the MP Board.";
 export const ogImagePath = "/social-card";
 
 function resolveConfiguredSiteUrl(): URL | null {
