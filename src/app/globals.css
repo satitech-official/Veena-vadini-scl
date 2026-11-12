@@ -4460,3 +4460,69 @@ html[data-vv-language="hi"] .learning-timeline li p,
 html[data-vv-language="hi"] .internal-approach-list p {
   line-height: 1.28 !important;
 }
+
+
+/* Final fit correction for Learning Approach cards.
+ * Keeps the 5-column desktop design while guaranteeing every label stays inside its cell. */
+@media (min-width: 80rem) {
+  #learning-approach .learning-timeline {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
+
+  #learning-approach .learning-timeline li {
+    min-width: 0;
+    overflow: hidden;
+    padding: 1.55rem 1.15rem 1.45rem;
+  }
+
+  #learning-approach .learning-timeline li p {
+    display: block;
+    width: 100%;
+    max-width: 100% !important;
+    margin-top: 2rem;
+    font-size: clamp(1.02rem, 1.18vw, 1.28rem);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: none;
+  }
+
+  #learning-approach .learning-timeline li span {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 64rem) and (max-width: 79.99rem) {
+  #learning-approach .learning-timeline li {
+    overflow: hidden;
+    padding: 1.35rem 1rem;
+  }
+
+  #learning-approach .learning-timeline li p {
+    width: 100%;
+    max-width: 100% !important;
+    margin-top: 1.35rem;
+    font-size: 1.16rem;
+    line-height: 1.16;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+}
+
+@media (max-width: 39.99rem) {
+  #learning-approach .learning-timeline li {
+    overflow: hidden;
+  }
+
+  #learning-approach .learning-timeline li p {
+    width: 100%;
+    max-width: 100% !important;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+}
