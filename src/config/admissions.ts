@@ -12,6 +12,7 @@ export const admissionClasses = [
   "Class 6",
   "Class 7",
   "Class 8",
+  "Class 9",
 ] as const;
 
 export type AdmissionClass = (typeof admissionClasses)[number];
@@ -19,7 +20,7 @@ export type AdmissionClass = (typeof admissionClasses)[number];
 export const admissionClassGroups = [
   { number: "01", title: "Early Years", classes: ["Nursery", "LKG", "UKG"] },
   { number: "02", title: "Primary", classes: ["Class 1", "Class 2", "Class 3", "Class 4", "Class 5"] },
-  { number: "03", title: "Middle School", classes: ["Class 6", "Class 7", "Class 8"] },
+  { number: "03", title: "Middle School", classes: ["Class 6", "Class 7", "Class 8", "Class 9"] },
 ] as const;
 
 export const admissionOverview = [
@@ -40,7 +41,7 @@ export const admissionProcess = [
 export const admissionFaqs = [
   {
     question: "Which classes are available?",
-    answer: "Admissions enquiries are welcome for Nursery through Class 8.",
+    answer: "Admissions enquiries are welcome for Nursery through Class 9.",
   },
   {
     question: "What is the medium of instruction?",
@@ -48,7 +49,7 @@ export const admissionFaqs = [
   },
   {
     question: "What academic pattern does the school follow?",
-    answer: "The school follows the CBSE Pattern.",
+    answer: "The school follows the MP Board.",
   },
   {
     question: "How can I enquire about admission?",
