@@ -70,8 +70,8 @@ export const placeholderMedia = {
 
 export const admissionRibbonItems = [
   "Admissions Open",
-  "Nursery to Class 8",
-  "CBSE Pattern",
+  "Nursery to Class 9",
+  "MP Board",
   "Hindi & English Medium",
   "Padhar, Betul",
 ] as const;
@@ -79,7 +79,7 @@ export const admissionRibbonItems = [
 export const schoolGlanceItems = [
   {
     number: "01",
-    label: "CBSE Pattern",
+    label: "MP Board",
     description: "A clear academic foundation designed to support steady learning.",
   },
   {
@@ -89,7 +89,7 @@ export const schoolGlanceItems = [
   },
   {
     number: "03",
-    label: "Nursery to Class 8",
+    label: "Nursery to Class 9",
     description: "A connected school journey from the early years through middle school.",
   },
   {
@@ -212,7 +212,7 @@ export const academicLevels = [
   {
     id: "middle-school",
     label: "Middle School",
-    classes: "Class 6–8",
+    classes: "Class 6–9",
     focus: "A steady next stage that supports responsibility, stronger communication, and thoughtful learning.",
     approach: ["Concept-based learning", "Personality development", "Moral / value education"],
     skills: "Independence, discipline, confidence",
