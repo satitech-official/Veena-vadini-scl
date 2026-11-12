@@ -141,7 +141,7 @@ export function SiteHeader({ isIntroComplete }: SiteHeaderProps) {
     <>
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-40 transition-[background-color,border-color,box-shadow,opacity,transform,padding] duration-500",
+          "site-header fixed inset-x-0 top-0 z-40 transition-[background-color,border-color,box-shadow,opacity,transform,padding] duration-500",
           isIntroComplete
             ? "translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-4 opacity-0",
