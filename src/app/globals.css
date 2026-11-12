@@ -4317,3 +4317,146 @@ html[data-vv-language="hi"] [data-vv-language-toggle="true"] * {
   font-family: var(--font-vv-sans), Arial, sans-serif !important;
   letter-spacing: 0.06em !important;
 }
+
+
+/* Site-wide responsive hardening — preserves the existing visual system while
+ * preventing text, grids, cards, and translated content from escaping layouts. */
+main,
+main section,
+main article,
+main div,
+main li,
+.site-footer,
+.site-footer div,
+header div,
+nav,
+nav ul,
+nav li {
+  min-width: 0;
+}
+
+main img,
+.site-footer img {
+  max-width: 100%;
+  height: auto;
+}
+
+main :where(h1, h2, h3, h4, h5, h6, p, a, button, span, li),
+.site-footer :where(h1, h2, h3, h4, h5, h6, p, a, span, li) {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.learning-timeline li {
+  min-width: 0;
+  padding-right: clamp(1rem, 1.4vw, 1.35rem);
+  padding-left: clamp(1rem, 1.4vw, 1.35rem);
+}
+
+.learning-timeline li:nth-child(5n + 1) {
+  padding-left: clamp(1rem, 1.4vw, 1.35rem);
+}
+
+.learning-timeline li p {
+  width: 100%;
+  max-width: none !important;
+  font-size: clamp(1.12rem, 1.45vw, 1.45rem);
+  line-height: 1.08;
+  overflow-wrap: normal;
+}
+
+.internal-approach-list li,
+.school-glance-item,
+.facilities-item button,
+.academic-stage-tab,
+.downloads-list li,
+.faculty-profile-card {
+  min-width: 0;
+}
+
+.internal-approach-list p,
+.school-glance-item h3,
+.facilities-item button span,
+.academic-stage-tab strong,
+.downloads-list h3,
+.faculty-profile-card h2 {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+@media (min-width: 64rem) and (max-width: 79.99rem) {
+  .learning-timeline {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .learning-timeline li {
+    min-height: 10.5rem;
+    border-left: 1px solid color-mix(in srgb, white 22%, transparent);
+  }
+
+  .learning-timeline li:nth-child(3n + 1) {
+    border-left: 0;
+  }
+}
+
+@media (max-width: 63.99rem) {
+  .learning-timeline li {
+    padding-inline: 1rem;
+  }
+
+  .learning-timeline li:nth-child(5n + 1) {
+    padding-left: 1rem;
+  }
+
+  .internal-approach-list p {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+  }
+}
+
+@media (max-width: 39.99rem) {
+  .learning-timeline {
+    grid-template-columns: 1fr !important;
+  }
+
+  .learning-timeline li {
+    min-height: 0;
+    padding: 1.2rem 0;
+    border-left: 0 !important;
+  }
+
+  .learning-timeline li p {
+    margin-top: 0.65rem;
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  .school-glance-item {
+    grid-template-columns: 2.4rem minmax(0, 1fr);
+    min-height: 0;
+    padding-block: 1.25rem;
+  }
+
+  .internal-page-hero-title,
+  .hero-title {
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .downloads-list h3,
+  .faculty-profile-card h2 {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+}
+
+/* Hindi text can expand substantially compared with English; give it room
+ * without changing the underlying component layout. */
+html[data-vv-language="hi"] main :where(h1, h2, h3, p, a, button, span, li) {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+html[data-vv-language="hi"] .learning-timeline li p,
+html[data-vv-language="hi"] .internal-approach-list p {
+  line-height: 1.28 !important;
+}
