@@ -3,14 +3,14 @@ import { placeholderMedia } from "@/content/homepage";
 export const internalPageFacts = {
   school: [
     { label: "Location", value: "Padhar, District Betul" },
-    { label: "Academic pattern", value: "CBSE Pattern" },
+    { label: "Academic pattern", value: "MP Board" },
     { label: "Medium", value: "Hindi & English Medium" },
-    { label: "Classes", value: "Nursery to Class 8" },
+    { label: "Classes", value: "Nursery to Class 9" },
   ],
   academics: [
-    { label: "Classes", value: "Nursery to Class 8" },
+    { label: "Classes", value: "Nursery to Class 9" },
     { label: "Medium", value: "Hindi & English Medium" },
-    { label: "Pattern", value: "CBSE Pattern" },
+    { label: "Pattern", value: "MP Board" },
   ],
 } as const;
 
@@ -39,7 +39,7 @@ export const internalAcademicStages = [
     id: "middle-school",
     number: "03",
     label: "Middle School",
-    classes: ["Class 6", "Class 7", "Class 8"],
+    classes: ["Class 6", "Class 7", "Class 8", "Class 9"],
     title: "Learning habits become more independent.",
     description: "A steady next stage for building stronger subject understanding, independent learning habits, communication, problem solving, and responsibility.",
     focus: ["Subject understanding", "Independent learning", "Communication", "Problem solving", "Responsibility"],
