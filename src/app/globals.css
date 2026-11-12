@@ -4649,3 +4649,107 @@ main section .gap-12 {
     line-height: 1.62;
   }
 }
+
+
+/* Balanced section headings — remove awkward orphan lines while preserving
+ * the existing typography, colors and overall visual design. */
+#why-veena-vadini h2,
+#academics-preview h2,
+#facilities h2,
+#student-life h2,
+#learning-approach h2,
+.internal-academics-introduction h2,
+.internal-learning-approach h2,
+.internal-facilities-intro h2,
+.internal-student-life-intro h2 {
+  text-wrap: balance;
+  max-width: 14ch;
+}
+
+@media (min-width: 64rem) {
+  #why-veena-vadini h2 br,
+  #academics-preview h2 br,
+  #facilities h2 br,
+  #student-life h2 br {
+    display: none;
+  }
+
+  #why-veena-vadini h2 span,
+  #academics-preview h2 span,
+  #facilities h2 span,
+  #student-life h2 span {
+    display: inline;
+  }
+
+  #why-veena-vadini h2 span::before,
+  #academics-preview h2 span::before,
+  #facilities h2 span::before,
+  #student-life h2 span::before {
+    content: " ";
+  }
+
+  #facilities h2 {
+    max-width: 16ch;
+    font-size: clamp(3rem, 4.9vw, 5.75rem);
+    line-height: 0.92;
+  }
+
+  #why-veena-vadini h2,
+  #academics-preview h2 {
+    max-width: 15ch;
+  }
+
+  #student-life h2 {
+    max-width: 12ch;
+  }
+}
+
+@media (min-width: 40rem) and (max-width: 63.99rem) {
+  #why-veena-vadini h2,
+  #academics-preview h2,
+  #facilities h2,
+  #student-life h2 {
+    max-width: 13ch;
+    line-height: 0.96;
+  }
+
+  #why-veena-vadini h2 br,
+  #academics-preview h2 br,
+  #facilities h2 br,
+  #student-life h2 br {
+    display: none;
+  }
+
+  #why-veena-vadini h2 span::before,
+  #academics-preview h2 span::before,
+  #facilities h2 span::before,
+  #student-life h2 span::before {
+    content: " ";
+  }
+}
+
+@media (max-width: 39.99rem) {
+  #why-veena-vadini h2,
+  #academics-preview h2,
+  #facilities h2,
+  #student-life h2,
+  #learning-approach h2 {
+    max-width: 100%;
+    text-wrap: balance;
+    line-height: 1;
+  }
+
+  #why-veena-vadini h2 br,
+  #academics-preview h2 br,
+  #facilities h2 br,
+  #student-life h2 br {
+    display: none;
+  }
+
+  #why-veena-vadini h2 span::before,
+  #academics-preview h2 span::before,
+  #facilities h2 span::before,
+  #student-life h2 span::before {
+    content: " ";
+  }
+}
