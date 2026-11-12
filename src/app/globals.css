@@ -4753,3 +4753,379 @@ main section .gap-12 {
     content: " ";
   }
 }
+
+
+/* Full responsive QA pass — preserve the visual design while making every
+ * public section safe on desktop, tablet and mobile. */
+:where(main, header, footer) :where(.grid, .flex, article, section, nav, ul, ol, li, div) {
+  min-width: 0;
+}
+
+:where(main, footer) :where(h1, h2, h3, h4, p, a, button, span, dd, dt) {
+  max-width: 100%;
+}
+
+:where(main, footer) :where(img, video, iframe, svg) {
+  max-width: 100%;
+}
+
+.school-media-placeholder,
+.gallery-preview-frame,
+.gallery-preview-media,
+.gallery-media-visual,
+.contact-map-panel,
+.facilities-story-visual,
+.internal-page-hero-media {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.school-media-placeholder img,
+.gallery-preview-frame img,
+.gallery-media-visual img,
+.internal-page-hero-media img {
+  max-width: 100%;
+  height: 100%;
+}
+
+/* Prevent long translated labels and CMS text from breaking card boundaries. */
+:where(
+  .school-glance-item,
+  .facilities-item,
+  .internal-approach-list li,
+  .academic-stage-tab,
+  .admissions-chapter-index > div,
+  .downloads-list li,
+  .faculty-profile-card,
+  .gallery-preview-frame
+) :where(h2, h3, p, span, dd) {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+/* Keep large editorial headings balanced instead of forcing awkward orphan lines. */
+:where(
+  .hero-title,
+  .internal-page-hero-title,
+  #school-introduction h2,
+  #about h2,
+  #vision-and-mission h2,
+  #why-veena-vadini h2,
+  #academics-preview h2,
+  #learning-approach h2,
+  #facilities h2,
+  #student-life h2,
+  #gallery-preview h2,
+  #admissions h2,
+  #notices-preview h2,
+  #events-preview h2
+) {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+/* Tablet: reduce oversized editorial layouts before they become cramped. */
+@media (min-width: 48rem) and (max-width: 79.99rem) {
+  .hero-title {
+    font-size: clamp(4.2rem, 8vw, 6.4rem);
+  }
+
+  #school-introduction h2,
+  #about h2,
+  #why-veena-vadini h2,
+  #academics-preview h2,
+  #facilities h2,
+  #student-life h2,
+  #gallery-preview h2,
+  #admissions h2,
+  #notices-preview h2,
+  #events-preview h2 {
+    font-size: clamp(3rem, 6vw, 4.8rem) !important;
+    line-height: 0.98 !important;
+  }
+
+  .gallery-preview-collage {
+    gap: 1rem;
+  }
+
+  .faculty-profile-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .downloads-list li {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .downloads-list li > a {
+    grid-column: 2 / -1;
+    justify-self: start;
+  }
+}
+
+/* Mobile layout pass. */
+@media (max-width: 47.99rem) {
+  .hero-section .grid.min-h-\[100svh\] {
+    min-height: auto;
+    gap: 2rem;
+    padding-top: 7.25rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.65rem, 13vw, 4.3rem);
+    line-height: 1;
+  }
+
+  .hero-section article {
+    max-width: 100%;
+  }
+
+  .hero-section .hero-emblem-shell {
+    width: min(86vw, 21rem);
+    margin-top: 0.5rem;
+  }
+
+  .hero-section a[class*="min-w-"] {
+    min-width: 0 !important;
+    width: 100%;
+  }
+
+  .hero-section .type-h3 {
+    font-size: clamp(1.35rem, 6vw, 1.8rem);
+    line-height: 1.25;
+  }
+
+  .hero-section ul[aria-label="School highlights"] {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section ul[aria-label="School highlights"] li {
+    min-height: 0;
+    border-right: 0 !important;
+    border-top: 1px solid color-mix(in srgb, var(--brand-indigo) 12%, transparent);
+    padding: 1rem 0 !important;
+  }
+
+  .hero-section ul[aria-label="School highlights"] li:first-child {
+    border-top: 0;
+  }
+
+  #school-introduction h2,
+  #about h2,
+  #vision-and-mission h2,
+  #why-veena-vadini h2,
+  #academics-preview h2,
+  #learning-approach h2,
+  #facilities h2,
+  #student-life h2,
+  #gallery-preview h2,
+  #admissions h2,
+  #notices-preview h2,
+  #events-preview h2,
+  .internal-page-hero-title {
+    max-width: 100% !important;
+    font-size: clamp(2.45rem, 12vw, 3.75rem) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.04em !important;
+  }
+
+  #about .grid,
+  #vision-and-mission .grid,
+  #why-veena-vadini .grid,
+  #academics-preview .grid,
+  #learning-approach .grid,
+  #facilities .grid,
+  #student-life .grid,
+  #gallery-preview .grid,
+  #admissions .grid,
+  #events-preview .grid,
+  .internal-page-hero-layout {
+    gap: 1.75rem !important;
+  }
+
+  .school-glance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .school-glance-item,
+  .school-glance-item:nth-child(odd),
+  .school-glance-item:nth-child(even) {
+    min-height: 0;
+    padding: 1.2rem 0;
+    border-right: 0;
+  }
+
+  .academics-tabs,
+  .academic-stage-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .academics-tab + .academics-tab,
+  .academic-stage-tab + .academic-stage-tab {
+    border-left: 0;
+    border-top: 1px solid color-mix(in srgb, white 14%, transparent);
+  }
+
+  .academics-panel > div {
+    padding: 1.25rem !important;
+  }
+
+  .facilities-list button {
+    grid-template-columns: 2.4rem minmax(0, 1fr) auto;
+    gap: 0.7rem;
+    padding: 1.2rem 0.4rem;
+  }
+
+  .facilities-list button > span:nth-child(2) > span:first-child {
+    font-size: clamp(1.55rem, 8vw, 2.2rem) !important;
+    line-height: 1.05 !important;
+  }
+
+  .student-life-collage {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .student-life-collage > .student-life-moment {
+    grid-column: 1 / -1 !important;
+    margin-top: 0 !important;
+  }
+
+  .student-life-collage .school-media-placeholder {
+    min-height: 16rem !important;
+    aspect-ratio: 4 / 3 !important;
+  }
+
+  .gallery-preview-collage {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .gallery-preview-frame {
+    grid-column: 1 / -1 !important;
+    min-height: 17rem !important;
+  }
+
+  .gallery-preview-meta {
+    gap: 0.75rem;
+  }
+
+  .admissions-chapter-index > div {
+    grid-template-columns: 2.25rem minmax(0, 1fr);
+  }
+
+  #admissions .mt-12.flex,
+  #admissions .mt-16.flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #admissions .mt-12.flex > *,
+  #admissions .mt-16.flex > * {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #events-preview article.grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  #events-preview ol article {
+    grid-template-columns: 3.8rem minmax(0, 1fr);
+  }
+
+  .internal-page-hero-media .school-media-placeholder {
+    min-height: 15rem !important;
+  }
+
+  .internal-page-hero-facts {
+    grid-template-columns: 1fr !important;
+  }
+
+  .internal-approach-list {
+    grid-template-columns: 1fr !important;
+  }
+
+  .internal-approach-list li,
+  .internal-approach-list li:nth-child(even) {
+    padding: 1rem 0;
+    border-left: 0;
+  }
+
+  .faculty-profile-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .faculty-profile-portrait {
+    min-height: 18rem;
+  }
+
+  .downloads-list li {
+    grid-template-columns: 2.25rem minmax(0, 1fr) !important;
+    gap: 0.8rem;
+    align-items: start;
+  }
+
+  .downloads-document-meta,
+  .downloads-list li > a {
+    grid-column: 2 !important;
+  }
+
+  .site-footer-opening {
+    padding-top: 2.75rem !important;
+    padding-bottom: 2.75rem !important;
+  }
+
+  .site-footer-opening .flex.items-center {
+    align-items: flex-start;
+  }
+
+  .site-footer-opening .font-display {
+    overflow-wrap: break-word;
+  }
+
+  .site-footer > div > .grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .site-footer .footer-contact-link {
+    width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Very small phones: keep controls and typography inside the viewport. */
+@media (max-width: 23.5rem) {
+  .hero-title,
+  .internal-page-hero-title,
+  #school-introduction h2,
+  #about h2,
+  #vision-and-mission h2,
+  #why-veena-vadini h2,
+  #academics-preview h2,
+  #learning-approach h2,
+  #facilities h2,
+  #student-life h2,
+  #gallery-preview h2,
+  #admissions h2,
+  #notices-preview h2,
+  #events-preview h2 {
+    font-size: clamp(2.2rem, 11.5vw, 3rem) !important;
+  }
+
+  header [data-vv-language-toggle="true"] {
+    padding-inline: 0.65rem;
+  }
+
+  .facilities-list button {
+    grid-template-columns: 2rem minmax(0, 1fr);
+  }
+
+  .facilities-list button > svg {
+    display: none;
+  }
+}
