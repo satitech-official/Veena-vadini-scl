@@ -6,9 +6,9 @@ export const schoolConfig = {
   name: "Veena Vadini Public School",
   tagline: "Empowering Young Minds for a Brighter Tomorrow.",
   motto: "Dream. Believe. Achieve.",
-  board: "CBSE Pattern",
+  board: "MP Board",
   medium: "Hindi & English",
-  classes: "Nursery to Class 8",
+  classes: "Nursery to Class 9",
   address: {
     lines: ["Chhuri Road", "Padhar", "District Betul", "Madhya Pradesh"],
     formatted: "Chhuri Road, Padhar, District Betul, Madhya Pradesh",
