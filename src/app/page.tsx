@@ -9,7 +9,7 @@ import { createPageMetadata } from "@/config/site-metadata";
 export const metadata: Metadata = createPageMetadata({
   title: "Veena Vadini Public School | Padhar, Betul",
   description:
-    "Veena Vadini Public School in Padhar, District Betul, Madhya Pradesh offers Hindi and English medium education from Nursery to Class 8 following a CBSE Pattern.",
+    "Veena Vadini Public School in Padhar, District Betul, Madhya Pradesh offers Hindi and English medium education from Nursery to Class 9 under the MP Board.",
   pathname: "/",
 });
 
