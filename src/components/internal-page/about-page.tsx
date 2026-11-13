@@ -19,7 +19,7 @@ export async function AboutPage() {
   const aboutHeading = getCmsText(settings.cmsContent, "about", "heading", "A Place to Learn,");
   const aboutHighlight = getCmsText(settings.cmsContent, "about", "highlight", "Grow & Believe.");
   const leadershipHeading = getCmsText(settings.cmsContent, "leadership", "heading", "Guidance, ready to");
-  const leadershipDescription = getCmsText(settings.cmsContent, "leadership", "description", "Leadership profiles will appear here when approved names, designations, messages, signatures, and photographs are supplied by the school.");
+  const leadershipDescription = getCmsText(settings.cmsContent, "leadership", "description", "Our school leadership supports a caring, disciplined and purposeful learning environment for every child.");
   const leaderName = getCmsText(settings.cmsContent, "leadership", "name", "");
   const leaderDesignation = getCmsText(settings.cmsContent, "leadership", "designation", "");
   const leaderMessage = getCmsText(settings.cmsContent, "leadership", "message", "");
@@ -109,7 +109,7 @@ export async function AboutPage() {
               <div>
                 <p className="type-eyebrow text-brand-red">Values in focus</p>
                 <h2>Qualities that<br /><span>shape the day.</span></h2>
-                <p>Editable school-value themes; confirm official wording before publication.</p>
+                <p>These values support learning, confidence, discipline, creativity and respectful growth across the school community.</p>
               </div>
               <ol className="internal-values-sequence">
                 {editableValueThemes.map((value, index) => <li key={value}><span>0{index + 1}</span><strong>{value}</strong></li>)}
@@ -138,7 +138,7 @@ export async function AboutPage() {
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.72fr)_minmax(16rem,0.64fr)] lg:items-center lg:gap-20">
               <div>
                 <p className="type-eyebrow text-gold">School leadership</p>
-                <h2>{leadershipHeading}<br /><span>{leaderName ? "School leadership." : "be introduced."}</span></h2>
+                <h2>{leadershipHeading}<br /><span>{leaderName ? "School leadership." : "guiding our school."}</span></h2>
               </div>
               <div>
                 {leaderName ? <p className="font-display text-3xl tracking-[-0.05em] text-gold">{leaderName}{leaderDesignation ? ` · ${leaderDesignation}` : ""}</p> : null}
