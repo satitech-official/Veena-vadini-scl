@@ -68,7 +68,7 @@ export async function HomeStory() {
               />
               <div className="about-media-note absolute -bottom-5 -right-2 hidden max-w-48 border border-brand-indigo/12 bg-surface px-5 py-4 shadow-[0_18px_45px_rgba(27,27,76,0.08)] sm:block">
                 <p className="type-eyebrow text-brand-red">A place to belong</p>
-                <p className="mt-2 text-sm leading-5 text-muted">A future home for approved campus photography.</p>
+                <p className="mt-2 text-sm leading-5 text-muted">A welcoming campus environment for learning, confidence and growth.</p>
               </div>
             </div>
             <div className="lg:py-8">
@@ -150,7 +150,7 @@ export async function HomeStory() {
                       ))}
                     </div>
                     <p className="mt-4 text-sm leading-6 text-white/52">
-                      Editable school-value themes; confirm official wording before publication.
+                      These values guide everyday learning, behaviour, confidence and care across the school community.
                     </p>
                   </div>
                 </div>
