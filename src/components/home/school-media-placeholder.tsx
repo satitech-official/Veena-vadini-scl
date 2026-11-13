@@ -24,6 +24,7 @@ export function SchoolMediaPlaceholder({
       >
         <img
           alt={media.alt ?? media.label}
+          decoding="async"
           className="absolute inset-0 h-full w-full object-cover"
           loading="lazy"
           src={media.asset}
