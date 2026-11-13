@@ -9,7 +9,7 @@ import { useMotionProfile } from "@/lib/motion/use-motion-profile";
 export function PageTransition({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const { isCompactMotion, prefersReducedMotion } = useMotionProfile();
-  const shouldReduce = prefersReducedMotion;
+  const shouldReduce = prefersReducedMotion || isCompactMotion;
 
   return (
     <motion.div
