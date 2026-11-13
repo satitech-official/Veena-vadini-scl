@@ -22,10 +22,10 @@ const alwaysVisibleSectionClasses = new Set([
  */
 export function SectionMotion() {
   const pathname = usePathname();
-  const { prefersReducedMotion } = useMotionProfile();
+  const { isCompactMotion, prefersReducedMotion } = useMotionProfile();
 
   useEffect(() => {
-    if (prefersReducedMotion) {
+    if (prefersReducedMotion || isCompactMotion) {
       return;
     }
 
@@ -74,7 +74,7 @@ export function SectionMotion() {
         target.classList.remove("motion-section-pending", "motion-section-visible");
       });
     };
-  }, [pathname, prefersReducedMotion]);
+  }, [isCompactMotion, pathname, prefersReducedMotion]);
 
   return null;
 }
