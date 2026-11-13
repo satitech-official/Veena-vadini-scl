@@ -5189,3 +5189,38 @@ main section .gap-12 {
     scroll-margin-top: 5.25rem;
   }
 }
+
+
+/* Mobile performance stability — same design, less GPU/paint work. */
+@media (max-width: 47.99rem) {
+  .site-header {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  .admission-ribbon-track {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  main > section:not(.hero-section):not(.internal-page-hero) {
+    content-visibility: auto;
+    contain-intrinsic-size: 720px;
+  }
+
+  .hero-watermark,
+  .academics-ghost-text,
+  .vision-watermark,
+  .contact-chapter-mark,
+  .contact-form-ghost {
+    will-change: auto;
+  }
+
+  .school-media-placeholder,
+  .gallery-preview-frame,
+  .student-life-moment,
+  .academics-shell {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+}
