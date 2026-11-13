@@ -20,7 +20,7 @@ import "./globals.css";
 const displayFont = Cormorant_Garamond({
   variable: "--font-vv-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "600", "700"],
 });
 
 const sansFont = DM_Sans({
@@ -32,7 +32,7 @@ const sansFont = DM_Sans({
 const hindiDisplayFont = Noto_Serif_Devanagari({
   variable: "--font-vv-hi-display",
   subsets: ["devanagari"],
-  weight: ["500", "600", "700"],
+  weight: ["600", "700"],
 });
 
 const hindiSansFont = Noto_Sans_Devanagari({
