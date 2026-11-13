@@ -5224,3 +5224,62 @@ main section .gap-12 {
     backface-visibility: hidden;
   }
 }
+
+
+/* Final typography QA: aligned learning cards and a safe vision progress gutter. */
+#learning-approach .learning-timeline li {
+  display: grid;
+  grid-template-rows: auto minmax(3.25rem, auto);
+  align-content: start;
+}
+
+#learning-approach .learning-timeline li > span {
+  line-height: 1;
+}
+
+#learning-approach .learning-timeline li > p {
+  align-self: start;
+  margin-top: 1.35rem !important;
+  min-height: 3.25rem;
+  font-family: var(--font-vv-display), Georgia, "Times New Roman", serif;
+  font-size: clamp(1rem, 1.05vw, 1.18rem) !important;
+  font-weight: 600;
+  line-height: 1.14 !important;
+  letter-spacing: -0.018em !important;
+  text-wrap: balance;
+}
+
+#vision-and-mission .vision-progress-line::before {
+  left: 5.9rem;
+  z-index: 0;
+  opacity: 0.72;
+}
+
+#vision-and-mission .vision-progress-line > article {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 63.99rem) {
+  #vision-and-mission .vision-progress-line::before {
+    display: none;
+  }
+
+  #learning-approach .learning-timeline li > p {
+    min-height: 0;
+    font-size: 1.08rem !important;
+  }
+}
+
+@media (max-width: 47.99rem) {
+  #learning-approach .learning-timeline li {
+    grid-template-rows: auto auto;
+  }
+
+  #learning-approach .learning-timeline li > p {
+    margin-top: 0.65rem !important;
+    font-size: 1.08rem !important;
+    line-height: 1.2 !important;
+    text-wrap: pretty;
+  }
+}
