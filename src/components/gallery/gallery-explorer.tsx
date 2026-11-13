@@ -20,7 +20,6 @@ export function GalleryExplorer({ hasLoadError = false, items, videos }: Gallery
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const triggerRef = useRef<HTMLElement | null>(null);
   const reduceMotion = usePrefersReducedMotion();
-  const isSampleCollection = items.some((item) => item.isPlaceholder) || videos.some((video) => video.isPlaceholder);
 
   const filteredItems = useMemo(
     () => (activeCategory === "All" ? items : items.filter((item) => item.category === activeCategory)),
@@ -40,7 +39,7 @@ export function GalleryExplorer({ hasLoadError = false, items, videos }: Gallery
           <div className="grid gap-8 border-t border-brand-indigo/15 pt-8 lg:grid-cols-[minmax(13rem,0.36fr)_minmax(0,1fr)] lg:gap-16">
             <div>
               <p className="type-eyebrow text-brand-red">Explore the collection</p>
-              <p className="mt-4 max-w-xs text-sm leading-6 text-muted">{isSampleCollection ? "Every sample frame is ready to be replaced with an approved school image, while keeping its category and composition." : "Explore approved school media by category. Open a frame for a closer view."}</p>
+              <p className="mt-4 max-w-xs text-sm leading-6 text-muted">{"Explore school media by category. Open a frame for a closer view."}</p>
             </div>
             <div>
               <div aria-label="Filter gallery by category" className="gallery-filter-list" role="group">
@@ -57,7 +56,7 @@ export function GalleryExplorer({ hasLoadError = false, items, videos }: Gallery
                 ))}
               </div>
               <p aria-live="polite" className="mt-5 text-xs font-bold uppercase tracking-[0.12em] text-muted">
-                {filteredItems.length === 1 ? `1 ${isSampleCollection ? "sample " : ""}media moment shown` : `${filteredItems.length} ${isSampleCollection ? "sample " : ""}media moments shown`}
+                {filteredItems.length === 1 ? "1 media moment shown" : `${filteredItems.length} media moments shown`}
               </p>
             </div>
           </div>
