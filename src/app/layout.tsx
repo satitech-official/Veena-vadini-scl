@@ -41,6 +41,14 @@ const hindiSansFont = Noto_Sans_Devanagari({
   weight: ["400", "500", "600", "700"],
 });
 
+function normalizeSchoolFacts(value: string) {
+  return value
+    .replaceAll("Nursery to Class 8", "Nursery to Class 9")
+    .replaceAll("through Class 8", "through Class 9")
+    .replaceAll("CBSE Pattern", "MP Board")
+    .replaceAll("following a CBSE Pattern", "under the MP Board");
+}
+
 function safeHttpUrl(value: string) {
   try {
     const url = new URL(value);
@@ -54,9 +62,13 @@ export async function generateMetadata(): Promise<Metadata> {
   const settings = await getPublicSchoolSettings();
   const seo = settings.cmsContent.seo;
   const title = getCmsText(settings.cmsContent, "seo", "siteTitle", String(siteMetadata.title ?? settings.name));
-  const description = getCmsText(settings.cmsContent, "seo", "metaDescription", String(siteMetadata.description ?? ""));
+  const description = normalizeSchoolFacts(
+    getCmsText(settings.cmsContent, "seo", "metaDescription", String(siteMetadata.description ?? "")),
+  );
   const ogTitle = getCmsText(settings.cmsContent, "seo", "ogTitle", title);
-  const ogDescription = getCmsText(settings.cmsContent, "seo", "ogDescription", description);
+  const ogDescription = normalizeSchoolFacts(
+    getCmsText(settings.cmsContent, "seo", "ogDescription", description),
+  );
   const canonical = safeHttpUrl(seo?.canonicalUrl ?? "");
   const ogImage = safeHttpUrl(seo?.ogImageUrl ?? "");
 
