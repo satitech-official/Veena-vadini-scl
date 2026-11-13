@@ -55,7 +55,7 @@ export function SchoolMediaPlaceholder({
           <p className="font-display text-2xl leading-[0.95] tracking-[-0.04em] text-primary">
             {media.label}
           </p>
-          <p className="mt-3 text-sm leading-6 text-muted">Replace with approved school media.</p>
+          <p className="mt-3 text-sm leading-6 text-muted">Veena Vadini Public School</p>
         </div>
       </div>
       <figcaption className="sr-only">{media.description}</figcaption>
