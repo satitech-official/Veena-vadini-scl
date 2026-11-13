@@ -10,7 +10,6 @@ import { cn } from "@/lib/utils/cn";
 export async function GalleryPreview() {
   const { records, hasLoadError } = await getGalleryContentResult();
   const items = records.items.filter((item) => item.featured).slice(0, 6);
-  const isSampleCollection = items.some((item) => item.isPlaceholder);
 
   return (
     <section className="gallery-preview-section relative overflow-hidden bg-background py-20 sm:py-28 lg:py-36" id="gallery-preview">
@@ -40,7 +39,6 @@ export async function GalleryPreview() {
             </Link>
           ))}
         </div> : <p className="mt-12 max-w-xl border-l-2 border-gold-ink pl-5 text-base leading-7 text-muted">{hasLoadError ? "The gallery is temporarily unavailable. Please refresh this page and try again." : "No approved gallery moments are published yet. The school’s visual archive will appear here when ready."}</p>}
-        {isSampleCollection ? <p className="mt-7 max-w-xl text-xs font-semibold leading-5 text-muted">Sample placeholders only — approved school photography will replace these frames before publication.</p> : null}
       </Container>
     </section>
   );
