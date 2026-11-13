@@ -63,11 +63,16 @@ function enforceLanguage(language: Language) {
   setDocumentLanguage(language);
   setGoogleTranslateCookie(language);
 
-  const delays = [0, 120, 300, 600, 1000, 1600, 2400, 3400];
+  if (language === "en") {
+    applyGoogleLanguage("en");
+    return;
+  }
+
+  const delays = [0, 180, 500, 1100];
   delays.forEach((delay) => {
     window.setTimeout(() => {
-      setDocumentLanguage(language);
-      applyGoogleLanguage(language);
+      setDocumentLanguage("hi");
+      applyGoogleLanguage("hi");
     }, delay);
   });
 }
@@ -151,12 +156,12 @@ export function LanguageToggle({ mobile = false }: { mobile?: boolean }) {
       let attempts = 0;
       const waitForGoogle = window.setInterval(() => {
         attempts += 1;
-        if (initialiseGoogleTranslator() || attempts >= 30) {
+        if (initialiseGoogleTranslator() || attempts >= 12) {
           window.clearInterval(waitForGoogle);
         }
-      }, 150);
+      }, 200);
 
-      window.setTimeout(() => window.clearInterval(waitForGoogle), 5000);
+      window.setTimeout(() => window.clearInterval(waitForGoogle), 2600);
     }
 
     enforceLanguage(saved);
